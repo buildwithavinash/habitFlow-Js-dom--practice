@@ -1,0 +1,259 @@
+:root {
+  --primary: #1a1a1d;
+  --secondary: #4e6e81;
+  --accent: #00d4ff;
+  --primary-text : #E2E2E2;
+  --secondary-text : #9BA4B0;
+  --disabled-text : #4E6E81;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid #fff; */
+}
+
+body {
+    min-height: 100vh;
+    background-color: #333;
+}
+
+/* DRY  */
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+/* app container  */
+.app__container {
+    background-color: var(--primary);
+    color: var(--primary-text);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 20px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* empty guide */
+.app__guide {
+    align-self: center;
+    background: #141414;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 36px;
+}
+
+.app__guide b {
+    color: var(--accent);
+}
+/* header  */
+
+.header {
+    margin-bottom: 36px;
+}
+.header__title {
+    color: var(--primary-text);
+    font-size: 4rem;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+.header__subtitle {
+    color: var(--secondary-text);
+    font-size: 1.4rem;
+}
+
+
+/* main  */
+
+
+/* habits input  */
+.habits__input form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.habit__text {
+    border: none;
+    padding: 12px 16px;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 8px;
+    color: var(--primary);
+    outline: none;
+}
+
+.btn__addHabit {
+    background-color: var(--accent);
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* progress  */
+
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.progressBar__container {
+    background-color: var(--secondary);
+    width: 100px;
+    height: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress__percent {
+    font-size: .8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+}
+
+.progress__bar {
+    height: 100%;
+    background-color: var(--accent);
+    transition: all 0.4s linear;
+}
+
+
+/* empty state  */
+.empty__state {
+    font-size: 1.1rem;
+    color: var(--secondary);
+}
+
+/* habits list  */
+
+.habits__section {
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.habits__section .section__title {
+    font-size: 1.5rem;
+}
+
+/* habit item  */
+
+.habits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px   ;
+    padding: 12px;
+}
+
+.habit__item {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--primary-text);
+    color: var(--primary);
+    border-radius: 12px;
+    padding: 4px;
+}
+
+.habit__item.completed .habit__name{
+    text-decoration: line-through;
+}
+
+.habit__item.completed {
+    opacity: 0.6;
+}
+.habit__container {
+    user-select: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.habit__status {
+    margin-right: 10px;
+     cursor: pointer;
+}
+
+.habit__content {
+  display: flex;
+  flex: 1;
+  min-width: 200px;
+  align-items: center;
+}
+
+.habit__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-left: 1px solid #333;
+    padding-left: 8px;
+}
+
+.habit__name {
+    font-size: 1.1rem;
+}
+
+.habit__streak {
+    font-size: .9rem;
+}
+
+.habit__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.btnEdit {
+    background-color: var(--accent);
+}
+
+.btnDelete {
+    background-color: rgb(227, 32, 71);
+}
+
+/* reset/footer section  */
+
+.reset__section {
+    padding: 16px;
+}
+
+.reset__section p {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.btnReset {
+    background-color: var(--accent);
+    font-weight: 600;
+}

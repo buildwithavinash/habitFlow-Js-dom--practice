@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabitFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- app wrapper -->
+    <div class="app__container">
+        <div class="app__guide">
+  <p>Click <b>Pending</b> to mark a habit as completed</p>
+  <p>Use <b>Edit</b> to rename a habit</p>
+  <p>Delete <b>removes</b> the habit permanently</p>
+  <p>Habits <b>reset automatically</b> every day</p>
+</div>
+
+
+        <header class="header">
+            <h1 class="header__title">HabitFlow</h1>
+            <p class="header__subtitle">Build consistency, one habit at a time.</p>
+        </header>
+
+        <main class="main">
+
+              <!-- habits input section  -->
+        <section class="habits__input">
+            <form action="">
+                  <input type="text" class="habit__text" placeholder="Enter a habit (e.g., Morning Walk)">
+            
+                  <input type="submit" value="Add Habit" class="btn btn__addHabit">
+            </form>   
+        </section>
+
+        <!-- stats/progress section  -->
+         <section class="progress">
+            <p class="progress__title">Today's Progress :</p>
+            <div class="progressBar__container">
+                <div class="progress__percent"></div>
+                <div class="progress__bar"></div>
+            </div>
+         </section>
+
+         <!-- habits list section -->
+          <section class="habits__section">
+            <div class="section__title">Your Habits</div>
+            <p class="empty__state">No habits yet. Add your first habit above 👆</p>
+
+            <ul class="habits">
+                <!-- <li class="habit__item">
+                    <div class="habit__container">
+                        <div class="habit__content">
+                             <div class="habit__status">
+                            Completed
+                        </div>
+
+                        <div class="habit__info">
+                            <div class="habit__name">Morning Walk</div>
+                            <div class="habit__streak">Streak : 3 days</div>
+                        </div>
+                        </div>
+                       
+
+                        <div class="habit__actions">
+                            <button class="btn btnEdit">Edit</button>
+                            <button class="btn btnDelete">Delete</button>
+                        </div>
+                    </div>
+                </li> -->
+
+               
+            </ul>
+          </section>
+
+
+
+        </main>
+      
+          <!-- footer/reset section  -->
+           <footer class="reset__section">
+            <p>Habits reset every day at midnight.</p>
+            <button class="btn btnReset">Reset Today</button>
+           </footer>
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

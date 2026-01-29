@@ -88,11 +88,6 @@ function renderHabits() {
   });
 }
 
-/**
- * Creates ONE habit <li> element from habit object
- * @param {Object} habit - single habit data
- * @returns {HTMLElement} <li> element
- */
 function createHabitElement(habit) {
   const habitItem = document.createElement("li");
   habitItem.classList.add("habit__item");
